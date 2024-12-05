@@ -7,9 +7,9 @@ class Solution:
             if nums[mid] == target: # if the element equals target
                 return mid # return
             elif mid < target: # if not
-                left = mid + 1 # go through left side and continue
+                left = mid + 1 # go through right side and continue
             else: # otherwise 
-                right = mid - 1 # go through right side and continue
+                right = mid - 1 # go through left side and continue
         return -1
         
         
