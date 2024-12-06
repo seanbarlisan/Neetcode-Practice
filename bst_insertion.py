@@ -11,7 +11,7 @@ class Node:
 # a new node with the given key
 def insert(root, key):
     if root is None:
-        return Node(key)
+        return Node(key) # object using Node class, creates a new node
     if root.val == key: # if the value is equal to the key we want
             return root # return the node that we wish for 
     if root.val < key: # if it is left than key
