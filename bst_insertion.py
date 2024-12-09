@@ -14,10 +14,10 @@ def insert(root, key):
         return Node(key) # object using Node class, creates a new node
     if root.val == key: # if the value is equal to the key we want
             return root # return the node that we wish for 
-    if root.val < key: # if it is left than key
-            root.right = insert(root.right, key) # insert into the left of the key and continue searching recursively
+    if root.val < key: # if it is greater than the current root.value
+            root.right = insert(root.right, key) # insert into the right of the key and continue searching recursively
     else:
-            root.left = insert(root.left, key) # insert into the right of the key and continue searching recursively
+            root.left = insert(root.left, key) # insert into the left of the key and continue searching recursively
     return root # the root exists already aka the node exists already
 
 
