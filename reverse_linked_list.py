@@ -5,7 +5,7 @@
 #         self.next = next
 
 class Solution:
-    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def reverseList(self, head):
         if not head: # If there is no head, return None because there is nothing to go next
             return None
 
