@@ -4,9 +4,9 @@ def singleNumber(nums):
     single = 0
     for x in numsRange:
         if nums[x] in seen:
-            single = nums[x]
-            seen.add(nums[x])
+            single = 0
         else:
+            seen.add(nums[x])
             single = nums[x]
     return single
 
