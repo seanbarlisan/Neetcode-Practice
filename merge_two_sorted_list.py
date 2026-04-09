@@ -46,18 +46,17 @@ def ListNodePrintList(head):
 def mergeTwoLists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
     dummy = node = ListNode()
 
-    while list1 and list2:
-        if list1.val < list2.val:
-            node.next = list1
-            list1 = list1.next
+    while list1 and list2: # while the lists are valid
+        if list1.val < list2.val: # compare the values of the head nodes
+            node.next = list1 # appear into the node for reference value 
+            list1 = list1.next # move up the list
         else:
-            node.next = list2
+            node.next = list2 # do the same for list 2
             list2 = list2.next
-        node = node.next
-
-    node.next = list1 or list2
-
-    return dummy.next
+        node = node.next # node will not move onto the next value to append
+    node.next = list1 or list2 # next node will be list1 or list2 based on value (?)
+ 
+    return dummy.next # (?)
 
 if __name__ == "__main__":
     # list1 = Node(10)
