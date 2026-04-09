@@ -11,16 +11,25 @@ def plusOne(digits):
             
             digitsLength -= 1
             
-        if flag:
-            digits.insert(0, 1)
+
+        if flag: # the logic needs to be fixed here
+            if digits[0] == 0:
+                digits.insert(0, 1)
+            else:
+                return digits
         else:
             return digits
+        # if flag:
+        #     digits.insert(0, 1)
+        # else:
+        #     return digits
 
-        return digits
+        # return digits
     
 
 if __name__ == "__main__":
-    digitList = [1, 2, 3, 4]
+    digitList = [8, 9, 9, 9]
     plusOne(digitList)
+    print(digitList)
 
 # need to account for edge case of [8, 9, 9, 9] -> [9, 0, 0, 0]
