@@ -56,7 +56,7 @@ def mergeTwoLists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Optio
         node = node.next # node will move onto the next value to append
     node.next = list1 or list2 # appends either list1 or list2 based on the merge result 
  
-    return dummy.next # (?)
+    return dummy.next # this points to the actual node reference pointer. if we did node.next, it returns only the node after or nothing at all.
 
 if __name__ == "__main__":
     # list1 = Node(10)
