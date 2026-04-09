@@ -12,4 +12,5 @@ def singleNumber(nums):
 
 if __name__== "__main__":
     numsList = [1, 2, 3, 4, 2, 1]
-    singleNumber(numsList)
+    result = singleNumber(numsList)
+    print(result)
