@@ -22,3 +22,5 @@ def plusOne(digits):
 if __name__ == "__main__":
     digitList = [1, 2, 3, 4]
     plusOne(digitList)
+
+# need to account for edge case of [8, 9, 9, 9] -> [9, 0, 0, 0]
