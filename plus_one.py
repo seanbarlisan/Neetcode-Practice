@@ -19,17 +19,8 @@ def plusOne(digits):
                 return digits
         else:
             return digits
-        # if flag:
-        #     digits.insert(0, 1)
-        # else:
-        #     return digits
-
-        # return digits
-    
 
 if __name__ == "__main__":
     digitList = [8, 9, 9, 9]
     plusOne(digitList)
     print(digitList)
-
-# need to account for edge case of [8, 9, 9, 9] -> [9, 0, 0, 0]
