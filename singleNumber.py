@@ -1,16 +1,15 @@
 def singleNumber(nums):
     seen = set()
     numsRange = range(len(nums))
-    single = 0
     for x in numsRange:
         if nums[x] in seen:
-            single = 0
+            seen.remove(nums[x]) # stack pop 
         else:
-            seen.add(nums[x])
-            single = nums[x]
-    return single
+            seen.add(nums[x]) # stack insert
+    return list(seen)[0]
+    
 
 if __name__== "__main__":
-    numsList = [1, 2, 3, 4, 2, 1]
+    numsList = [4, 1, 2, 1, 2]  
     result = singleNumber(numsList)
     print(result)
